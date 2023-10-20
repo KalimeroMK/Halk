@@ -1,0 +1,18 @@
+{
+    "name": "kalimeromk/halkbank-payment",
+    "description": "Laravel package for handling Halkbank payments",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kalimeromk\\HalkbankPayment\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "zoranbogoevski",
+            "email": "zoran@orangemelos.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
