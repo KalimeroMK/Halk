@@ -3,13 +3,19 @@
 namespace Kalimeromk\HalkbankPayment\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Foundation\Application;
 
 class PaymentController extends Controller
 {
-    public function showPaymentForm()
+    /**
+     * @param  int  $amount
+     * @return \Illuminate\Contracts\Foundation\Application|Factory|View|Application
+     */
+    public function showPaymentForm(int $amount)
     {
         $clientId = config('payment.client_id');
-        $amount = "9.95";
         $oid = ""; // Order Id. This can be generated dynamically if needed.
         $okUrl = config('payment.ok_url');
         $failUrl = config('payment.fail_url');
@@ -24,9 +30,24 @@ class PaymentController extends Controller
         $hashstr = $clientId.$oid.$amount.$okUrl.$failUrl.$transactionType.$instalment.$rnd.$storekey;
         $hash = base64_encode(pack('H*', sha1($hashstr)));
 
-        return view('payment::payment',
-            compact('clientId', 'amount', 'oid', 'okUrl', 'failUrl', 'transactionType', 'instalment', 'rnd', 'storekey',
-                'storetype', 'lang', 'currencyVal', 'hash'));
+        return view(
+            'payment::payment',
+            compact(
+                'clientId',
+                'amount',
+                'oid',
+                'okUrl',
+                'failUrl',
+                'transactionType',
+                'instalment',
+                'rnd',
+                'storekey',
+                'storetype',
+                'lang',
+                'currencyVal',
+                'hash'
+            )
+        );
     }
 
     public function paymentSuccess()
