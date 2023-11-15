@@ -8,7 +8,8 @@ This package was created by KalimeroMK.
 
 ## License
 
-The MIT License (MIT). Please see License File for more information.
+This package is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
 
 
 ## Prerequisites
@@ -20,9 +21,9 @@ Before you begin, ensure you have the following:
 
 Follow these steps to install the package:
 
-1. **Install via Composer**
+**Install via Composer**
    Run the following command to install the package:
-   ```
+   ```  
    composer require kalimeromk/halkbank-payment
    ```
 
@@ -37,14 +38,13 @@ Edit the published config/payment.php with your Halkbank credentials and setting
 Usage
 
 ## Routes
-```Initiate Payment: /payment/{amount}
-Payment Success: /payment/success
-Payment Failure: /payment/fail
-Payment Form
-Access the payment form by navigating to /payment/{amount}.
-Handling Responses
-Success: PaymentController@paymentSuccess
-Failure: PaymentController@paymentFail
+```
+Route::prefix('payment')->group(function () {
+    Route::get('/{amount}', [PaymentController::class, 'showPaymentForm'])->name('payment.form');
+    Route::post('/', [PaymentController::class, 'showPaymentForm'])->name('payment.post');
+    Route::get('success', [PaymentController::class, 'paymentSuccess'])->name('payment.success');
+    Route::get('fail', [PaymentController::class, 'paymentFail'])->name('payment.fail');
+});
 ```
 ## Customization
 
