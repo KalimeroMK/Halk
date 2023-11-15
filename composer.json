@@ -1,7 +1,17 @@
 {
     "name": "kalimeromk/halkbank-payment",
     "description": "A Laravel package for handling HalkBank payments.",
-    "type": "library",
+    "type": "package",
+    "license": "MIT",
+    "keywords": [
+        "laravel"
+    ],
+    "authors": [
+        {
+            "name": "Zorab Shefot Bogoevski",
+            "email": "zbogoevski@gmail.com"
+        }
+    ],
     "require": {
         "php": "^7.2|^8.0"
     },
@@ -16,11 +26,5 @@
                 "Kalimeromk\\HalkbankPayment\\HalkBankPaymentServiceProvider"
             ]
         }
-    },
-    "authors": [
-        {
-            "name": "Zoran Shefot Bogoevski",
-            "email": "zbogoevski@gmail.com"
-        }
-    ]
+    }
 }
