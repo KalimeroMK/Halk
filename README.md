@@ -2,6 +2,15 @@
 
 Integrate Halkbank's online payment gateway seamlessly into your Laravel application with this dedicated package. Designed specifically for Macedonian businesses, this package provides an easy-to-use interface for integrating Halkbank payment services.
 
+## Credits
+
+This package was created by KalimeroMK.
+
+## License
+
+The MIT License (MIT). Please see License File for more information.
+
+
 ## Prerequisites
 
 Before you begin, ensure you have the following:
