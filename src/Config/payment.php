@@ -29,8 +29,12 @@ return [
     'store_type' => env('PAYMENT_STORE_TYPE', '3D_PAY_HOSTING'),
     'currency' => env('PAYMENT_CURRENCY', '807'),
     'transaction_type' => env('PAYMENT_TRANSACTION_TYPE', 'Auth'),
-    'ok_url' => env('PAYMENT_OK_URL', 'http://localhost:87/payment/success'),
-    'fail_url' => env('PAYMENT_FAIL_URL', 'http://localhost:87/payment/fail'),
+    'ok_url' => env('PAYMENT_OK_URL', 'http://localhost:8080/payment/success'),
+    'fail_url' => env('PAYMENT_FAIL_URL', 'http://localhost:8080/payment/fail'),
     'lang' => env('PAYMENT_LANG', 'en'),
     'layout' => env('PAYMENT_LAYOUT', 'layouts.app'),
+    'exempt_uris' => [
+        'payment/success',
+        'payment/fail',
+    ]
 ];

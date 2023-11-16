@@ -36,6 +36,9 @@ Follow these steps to install the package:
 ```
 php artisan vendor:publish --provider="Kalimeromk\HalkbankPayment\HalkBankPaymentServiceProvider"
 ```
+
+## Middleware
+Pls register CsrfExemptMiddleware in the Kernel of laravel app
 ## Configure the Package
 Edit the published config/payment.php with your Halkbank credentials and settings.
 Usage
