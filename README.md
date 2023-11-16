@@ -1,6 +1,9 @@
 # Halkbank Payment Gateway for Laravel
+![Halk logo](https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Halkbank_logo.svg/2560px-Halkbank_logo.svg.png)
 
 Integrate Halkbank's online payment gateway seamlessly into your Laravel application with this dedicated package. Designed specifically for Macedonian businesses, this package provides an easy-to-use interface for integrating Halkbank payment services.
+
+
 
 ## Credits
 
