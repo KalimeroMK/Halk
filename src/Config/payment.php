@@ -24,9 +24,9 @@ return [
     |   CVC2 / CVV2 Number: 576
     |   3D Secure Password: a
     */
-    'client_id' => '180000093',
-    'store_key' => 'TEMP0151',
-    'store_type' => '3D_PAY_HOSTING',
+    'client_id' => '',
+    'store_key' => '',
+    'store_type' => '',
     'currency' => '807',
     'transaction_type' => 'Auth',
     'ok_url' => 'http://localhost:87/payment-success',
