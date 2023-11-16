@@ -24,13 +24,13 @@ return [
     |   CVC2 / CVV2 Number: 576
     |   3D Secure Password: a
     */
-    'client_id' => '',
-    'store_key' => '',
-    'store_type' => '',
-    'currency' => '807',
-    'transaction_type' => 'Auth',
-    'ok_url' => 'http://localhost:87/payment-success',
-    'fail_url' => 'http://localhost:87/payment-fail',
-    'lang' => 'en',
-    'layout' => '',
+    'client_id' => env('PAYMENT_CLIENT_ID', 'default_client_id'),
+    'store_key' => env('PAYMENT_STORE_KEY', 'default_store_key'),
+    'store_type' => env('PAYMENT_STORE_TYPE', '3D_PAY_HOSTING'),
+    'currency' => env('PAYMENT_CURRENCY', '807'),
+    'transaction_type' => env('PAYMENT_TRANSACTION_TYPE', 'Auth'),
+    'ok_url' => env('PAYMENT_OK_URL', 'http://localhost:87/payment-success'),
+    'fail_url' => env('PAYMENT_FAIL_URL', 'http://localhost:87/payment-fail'),
+    'lang' => env('PAYMENT_LANG', 'en'),
+    'layout' => env('PAYMENT_LAYOUT', 'layouts.app'),
 ];

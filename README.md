@@ -48,8 +48,21 @@ Route::prefix('payment')->group(function () {
 ```
 ## Customization
 
-Views: Customize the payment form in resources/views/vendor/payment.
-Controller: Extend PaymentController to modify or add new payment processing logic.
-Routes: Add new routes in your Laravel application as needed.
-Configuration: Update config/payment.php for any changes in payment parameters.
+## Views: 
+Customize the payment form in resources/views/vendor/payment.
+## Controller:
+Extend PaymentController to modify or add new payment processing logic.
+## Routes:
+Add new routes in your Laravel application as needed.
+## Halkbank Payment Gateway Configuration .env
+````
+PAYMENT_CLIENT_ID=
+PAYMENT_STORE_KEY=
+PAYMENT_STORE_TYPE=
+PAYMENT_CURRENCY=807
+PAYMENT_TRANSACTION_TYPE=Auth
+PAYMENT_OK_URL=http://localhost:87/payment-success
+PAYMENT_FAIL_URL=http://localhost:87/payment-fail
+PAYMENT_LANG=en
+PAYMENT_LAYOUT=
 

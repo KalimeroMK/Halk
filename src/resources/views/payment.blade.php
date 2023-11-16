@@ -1,4 +1,4 @@
-@extends(config('payment.layout', 'layouts.app'))
+@extends(config('payment.layout'))
 
 @section('content')
     <div class="d-flex justify-content-center align-items-center vh-100">
