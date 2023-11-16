@@ -10,7 +10,6 @@
                 <p>Client IP: {{ $clientIp }}</p>
                 <p>Error Message: {{ $mdErrorMsg }}</p>
                 <p>Error Description: {{ $errMsg }}</p>
-
             </div>
         </div>
     </div>
