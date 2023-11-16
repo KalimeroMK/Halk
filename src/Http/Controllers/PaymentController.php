@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
+use Illuminate\Http\Request;
 
 class PaymentController extends Controller
 {
@@ -55,8 +56,11 @@ class PaymentController extends Controller
         return 'raboti';
     }
 
-    public function paymentFail()
+    public function paymentFail(Request $request)
     {
-        return 'ne';
+        $clientIp = $request->input('clientIp');
+        $mdErrorMsg = $request->input('mdErrorMsg');
+        $errMsg = $request->input('ErrMsg');
+        return view('payment::fail', compact('clientIp', 'mdErrorMsg', 'errMsg'));
     }
 }
