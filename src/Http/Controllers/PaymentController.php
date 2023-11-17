@@ -51,9 +51,10 @@ class PaymentController extends Controller
         );
     }
 
-    public function paymentSuccess()
+    public function paymentSuccess(Request $request)
     {
-        return 'raboti';
+        $orderId = $request->input('ReturnOid');
+        return view('payment::success', compact('orderId'));
     }
 
     public function paymentFail(Request $request)
