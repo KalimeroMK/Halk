@@ -26,5 +26,8 @@
                 "Kalimeromk\\HalkbankPayment\\HalkBankPaymentServiceProvider"
             ]
         }
+    },
+    "require-dev": {
+        "larastan/larastan": "^2.0"
     }
 }

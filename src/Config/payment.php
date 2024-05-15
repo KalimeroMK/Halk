@@ -23,6 +23,10 @@ return [
     |   Expiration Date:08/25
     |   CVC2 / CVV2 Number: 576
     |   3D Secure Password: a
+
+     |   5292210551472211
+     |   Ex.date 09/25
+     |   CVV 367
     */
     'client_id' => env('PAYMENT_CLIENT_ID', 'default_client_id'),
     'store_key' => env('PAYMENT_STORE_KEY', 'default_store_key'),
