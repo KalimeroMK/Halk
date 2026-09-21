@@ -2,7 +2,7 @@
 
 namespace Kalimeromk\HalkbankPayment\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use Illuminate\Routing\Controller;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
